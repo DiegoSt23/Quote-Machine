@@ -5,7 +5,7 @@ import {faQuoteLeft, faQuoteRight} from "@fortawesome/free-solid-svg-icons"
 import {faTwitterSquare} from "@fortawesome/free-brands-svg-icons";
 import QuoteChanger from "./Button"
 
-let randomIndex = Math.floor(Math.random()*103);
+let randomIndex = Math.floor(Math.random()*102);
 const quotes = Data.quotes; 
 let simbols = () => {
 	var letters = ["a","b","c","d","e","f","0","1","2","3","4","5","6","7","8","9"];
