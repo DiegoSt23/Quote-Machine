@@ -39,7 +39,7 @@ const QuoteBox = () => {
                 </div>                       
                 <p>-{quotes[index].author}</p>
                 <div className="sub-container">
-                    <a href={encodedQuote} target="_blank" rel="noreferrer">
+                    <a href={encodedQuote} target="_blank" rel="noreferrer " className="icon-position">
                         <FontAwesomeIcon icon={faTwitterSquare} className="icon"/>
                     </a>                                    
                     <QuoteChanger action={action}/>                                              
