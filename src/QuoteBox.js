@@ -24,7 +24,7 @@ const QuoteBox = () => {
     const [index, setIndex] = useState(randomIndex);  
     const [color, setColor] = useState(colorHEX); 
     const action = () => {
-        setIndex(Math.floor(Math.random()*103));
+        setIndex(Math.floor(Math.random()*102));
         setColor(colorHEX)        
     };
     let encodedQuote = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(quotes[index].quote) + " -" + encodeURIComponent(quotes[index].author) + "."
