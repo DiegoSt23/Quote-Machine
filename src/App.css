@@ -25,11 +25,13 @@
 h3 {
   text-align: center;
   background-color: transparent;
+  font-weight: 100;
 }
 
 p {
   text-align: end;
   background-color: transparent;
+  font-weight: 100;
 }
 
 .icon {
