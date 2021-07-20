@@ -5,7 +5,7 @@ import {faQuoteLeft, faQuoteRight} from "@fortawesome/free-solid-svg-icons"
 import {faTwitterSquare} from "@fortawesome/free-brands-svg-icons";
 import QuoteChanger from "./Button"
 
-let randomIndex = Math.floor(Math.random()*102);
+let randomIndex = () => Math.floor(Math.random()*135);
 const quotes = Data.quotes; 
 let simbols = () => {
 	var letters = ["a","b","c","d","e","f","0","1","2","3","4","5","6","7","8","9"];
@@ -21,16 +21,16 @@ let colorHEX = () => {
 };
 
 const QuoteBox = () => {
-    const [index, setIndex] = useState(randomIndex);  
-    const [color, setColor] = useState(colorHEX); 
+    const [index, setIndex] = useState(randomIndex());  
+    const [color, setColor] = useState(colorHEX()); 
     const action = () => {
-        setIndex(Math.floor(Math.random()*102));
-        setColor(colorHEX)        
+        setIndex(randomIndex());
+        setColor(colorHEX())        
     };
     let encodedQuote = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(quotes[index].quote) + " -" + encodeURIComponent(quotes[index].author) + "."
     
     return (
-        <div className="container" style={{backgroundColor: color}}>
+        <div className="App-header" style={{backgroundColor: color}} >
             <div className="quote-box">
                 <FontAwesomeIcon icon={faQuoteLeft}/>
                 <h3>{quotes[index].quote}</h3>
